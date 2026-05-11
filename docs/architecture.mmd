@@ -1,0 +1,41 @@
+graph TD
+    %% Định nghĩa các Client/User
+    User((User/Browser))
+
+    subgraph Frontend_Layer [Frontend - Next.js]
+        NextJS[Next.js App<br/>SSR / CSR]
+    end
+
+    subgraph Backend_Layer [Backend - NestJS]
+        NestJS[NestJS API<br/>Auth Guard / Logic]
+    end
+
+    subgraph Infrastructure_Layer [Infrastructure]
+        Postgres[(PostgreSQL<br/>Persistent Data)]
+        Redis[(Redis<br/>Cache / Session)]
+        MinIO[(MinIO<br/>Object Storage)]
+    end
+
+    subgraph DevOps_Layer [DevOps]
+        GitLab[GitLab CI/CD<br/>Pipeline]
+    end
+
+    %% Luồng Request & Auth
+    User -->|1. Request + JWT/Cookie| NextJS
+    NextJS -->|2. Proxy/API Call| NestJS
+    
+    %% Tương tác Backend
+    NestJS -->|3. Check Cache| Redis
+    NestJS -->|4. Query/Persist| Postgres
+    NestJS -->|5. Upload/Get Files| MinIO
+
+    %% Luồng CI/CD
+    GitLab -.->|Deploy| NextJS
+    GitLab -.->|Deploy| NestJS
+
+    %% Styling
+    style User fill:#f9f,stroke:#333,stroke-width:2px
+    style GitLab fill:#fca,stroke:#f66,stroke-dasharray: 5 5
+    style Postgres fill:#336791,color:#fff
+    style Redis fill:#d82c20,color:#fff
+    style MinIO fill:#c33,color:#fff
