@@ -1,28 +1,28 @@
-# ✅ Definition of Done (DoD) - Week 1
+# Danh sách hoàn thành (Definition of Done) - Tuần 1
 
-> **Project:** Monorepo Foundations & AI-Augmented Development
-> **Status:** Finalizing for Review
+> **Dự án:** Nền tảng Monorepo & Phát triển cùng AI
+> **Trạng thái:** Sẵn sàng nộp bài (Final Review)
 
 ---
 
-## 1. Technical Standards
-- [x] **Unit Testing:** `npm test` pass 100% (7/7 test cases).
-- [x] **Code Coverage:** 100% Statements/Branches (Exceeded threshold: 60/50).
-- [x] **Linting:** `npm run lint` clean (0 errors, 0 warnings).
-- [x] **Type Safety:** All functions in `src/utils.ts` include JSDoc & TypeError handling.
+## 1. Tiêu chuẩn Kỹ thuật (Technical)
+- [x] **Unit Test:** `npm test` vượt qua 100% (7/7 test cases).
+- [x] **Độ bao phủ:** `npm run coverage` đạt 100% (Vượt ngưỡng yêu cầu 60/50).
+- [x] **Kiểm tra lỗi:** `npm run lint` chạy sạch (0 lỗi, 0 cảnh báo).
+- [x] **Chất lượng code:** Mỗi hàm trong `src/utils.ts` đều có JSDoc và xử lý `TypeError`.
 
-## 2. Architecture & Infrastructure
-- [x] **Architecture Map:** `docs/architecture.mmd` covers 6 core blocks (Next, Nest, Postgres, Redis, MinIO, GitLab CI).
-- [x] **Environment:** `.env.example` is complete; `.env` is properly ignored via `.gitignore`.
-- [x] **Docker:** `docker-compose.yml` configured for local development.
+## 2. Kiến trúc & Hạ tầng (Architecture)
+- [x] **Sơ đồ kiến trúc:** `docs/architecture.mmd` đủ 6 khối (Next, Nest, Postgres, Redis, MinIO, GitLab CI).
+- [x] **Môi trường:** `.env.example` đầy đủ; `.env` thật đã được chặn qua `.gitignore`.
+- [x] **Docker:** Thiết lập xong `docker-compose.yml` cho môi trường phát triển local.
 
-## 3. AI Collaboration (R-T-C-I-O-E)
-- [x] **Prompt Engineering:** `docs/prompts.md` contains 3+ high-quality prompts with annotations.
-- [x] **AI Self-Review:** First Merge Request (MR) includes a detailed AI-assisted description.
+## 3. Cộng tác cùng AI (R-T-C-I-O-E)
+- [x] **Kỹ thuật Prompt:** `docs/prompts.md` có ≥ 3 prompt chuẩn khung R-T-C-I-O-E kèm ghi chú.
+- [x] **Quy trình MR:** Merge Request đầu tiên có mô tả chi tiết và tự rà soát theo checklist AI.
 
-## 4. Documentation & Delivery
-- [x] **README:** Comprehensive guide (Objectives, Setup, Expected Results).
-- [x] **Presentation:** Slides (8-10 pages) prepared and submitted.
-- [x] **Git Flow:** Clean commit history with professional English messages.
+## 4. Tài liệu & Bàn giao (Delivery)
+- [x] **README:** Trình bày đầy đủ mục tiêu, cách cài đặt và kết quả mong đợi.
+- [x] **Báo cáo:** Slide thuyết trình (8–10 trang) đã hoàn thiện và nộp đúng hạn.
+- [x] **Git Flow:** Lịch sử commit rõ ràng, chuyên nghiệp.
 
 ---
